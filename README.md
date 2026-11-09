@@ -1,50 +1,26 @@
-# GymFlow — Phần mềm quản lý phòng gym (bản khởi đầu)
+# Taurus Gym — Quản lý phòng gym (mã nguồn tiếng Việt)
 
-## Quy ước tiếng Việt trong mã nguồn
+Dự án Next.js + TypeScript. Tên biến, hàm và chú thích nghiệp vụ dùng tiếng Việt; từ khóa và tên API bắt buộc của thư viện giữ nguyên tiếng Anh.
 
-- **Tên biến, hàm, kiểu dữ liệu nghiệp vụ, lớp CSS, chú thích và nội dung giao diện** được viết bằng tiếng Việt. Ví dụ: `HoiVien`, `danhSachHoiVien`, `themHoiVien`, `.thanh-ben`.
-- Tên biến, hàm và lớp CSS dùng **tiếng Việt không dấu** để dễ gõ, tìm kiếm và tránh nhầm lẫn khi chia sẻ mã nguồn.
-- **Giữ nguyên từ khóa, thuộc tính và API bắt buộc** của JavaScript/TypeScript/React/Next.js (ví dụ `const`, `return`, `useState`, `onClick`, `className`, `localStorage`, `package.json`, `page.tsx`). Dịch các tên này sẽ làm hỏng chương trình.
-- Những thuật ngữ công nghệ như Next.js, PWA, PostgreSQL được giữ tên chính thức, nhưng đều có giải thích bằng tiếng Việt.
-
-## Công nghệ
-
-Next.js, React, TypeScript, CSS, thư viện biểu tượng Lucide. Giao diện co giãn theo máy tính và điện thoại, có tệp khai báo cài đặt PWA (`manifest`).
-
-## Chạy thử trên Windows
-
-1. Cài Node.js phiên bản LTS.
-2. Mở PowerShell trong thư mục dự án.
-3. Chạy:
+## Chạy website trên Windows
 
 ```powershell
-npm install
-npm run dev
+npm.cmd install
+npm.cmd run dev
 ```
 
-4. Mở trình duyệt tại http://localhost:3000.
+Mở http://localhost:3000
 
-## Tính năng đang có
+## Trạng thái hiện tại
 
-- Bảng tổng quan hội viên và tiền thu minh họa.
-- Thêm, tìm kiếm, xóa hội viên; kiểm tra ngày hết hạn.
-- Lưu dữ liệu thử nghiệm bằng `localStorage` (bộ nhớ trình duyệt).
+- Trang tổng quan và danh sách hội viên vẫn là **bản demo localStorage**.
+- Đã bổ sung mã nguồn ban đầu cho check-in QR qua dịch vụ xác minh HTTPS trong mạng LAN.
+- Có API xác minh phiên Supabase, chữ ký HMAC và hàm SQL ghi nhận check-in/check-out nguyên tử.
+- Có giao diện hội viên tại `/check-in`.
+- **Chưa thể check-in thật** cho tới khi tạo Supabase, triển khai Cloud và HTTPS nội bộ; chưa có màn hình giám sát lễ tân.
 
-**Cảnh báo:** Chưa có máy chủ, cơ sở dữ liệu, đăng nhập, phân quyền hoặc kiểm tra dữ liệu ở phía máy chủ. Không dùng dữ liệu khách hàng thật. Chưa có chế độ ngoại tuyến hoặc quy trình cài PWA đầy đủ.
+Xem **[Hướng dẫn check-in LAN](huong-dan/CHECK-IN.md)** để triển khai và kiểm thử.
 
-## Đưa lên GitHub
+## An toàn
 
-Tạo kho mã nguồn riêng tư có tên `gym-management-pwa` tại https://github.com/new, không chọn tạo sẵn README. Trong thư mục dự án chạy:
-
-```powershell
-git init
-git add .
-git commit -m "Khoi tao du an quan ly phong gym"
-git branch -M main
-git remote add origin https://github.com/hungnmph50619/gym-management-pwa.git
-git push -u origin main
-```
-
-## Hướng phát triển tiếp theo
-
-Kết nối Supabase/PostgreSQL; đăng nhập và phân quyền; quản lý gói tập và thu phí; mã QR check-in; lịch huấn luyện viên; báo cáo và quản lý nhiều phòng gym. Mỗi thay đổi tiếp theo cần tuân thủ quy ước tiếng Việt nói trên.
+Không dùng dữ liệu hội viên thật ở trạng thái hiện tại. Tuyệt đối không commit file `.env.local`, khóa service role, khóa LAN hoặc khóa riêng TLS. Mạng Wi-Fi và QR không chứng minh tuyệt đối có mặt: cần đối chiếu ảnh bằng lễ tân khi vận hành thực tế.
