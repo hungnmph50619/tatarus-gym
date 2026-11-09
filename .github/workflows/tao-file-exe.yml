@@ -1,0 +1,33 @@
+name: Tạo TaurusGym.exe trên Windows
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "cong-cu-khoi-dong/**"
+      - ".github/workflows/tao-file-exe.yml"
+
+jobs:
+  dong-goi:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Lấy mã nguồn
+        uses: actions/checkout@v4
+      - name: Cài .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Biên dịch một file EXE cho Windows 64-bit
+        shell: pwsh
+        run: |
+          dotnet publish cong-cu-khoi-dong/TaurusGymLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o san-pham
+          if (-not (Test-Path "san-pham/TaurusGym.exe")) { throw "Không tìm thấy EXE" }
+      - name: Đóng gói file tải xuống
+        uses: actions/upload-artifact@v4
+        with:
+          name: TaurusGym-Windows-EXE
+          path: san-pham/TaurusGym.exe
+          if-no-files-found: error
+          retention-days: 30
