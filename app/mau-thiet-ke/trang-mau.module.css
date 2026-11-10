@@ -1,0 +1,135 @@
+/* Taurus Command – chỉ ảnh hưởng route /mau-thiet-ke, không sửa globals.css */
+.khungTrang {
+  --nen: #f5f8fc; --trang: #fff; --muc: #173052; --nho: #63758e;
+  --xanh: #0756c9; --xanhNhat: #eaf2ff; --vien: #dce6f2;
+  --cam: #ed715c; --xanhLa: #16794b; --do: #ad3240;
+  color: var(--muc); background: var(--nen); min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif; font-size: 14px;
+}
+.khungTrang * { box-sizing: border-box }
+.khungTrang button, .khungTrang input, .khungTrang select { font: inherit }
+.khungTrang button { cursor:pointer }
+.khungTrang button:disabled { cursor:not-allowed; opacity:.5 }
+.khungTrang :focus-visible {outline: 3px solid #f0a84b; outline-offset:3px}
+.khungTrang a { color:inherit; text-decoration:none }
+.chiDocManHinh { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0 }
+.boQua {position:absolute;top:-90px;left:16px;background:white;padding:12px;z-index:50;border-radius:8px}
+.boQua:focus {top:12px}
+.thanhDau {min-height:80px;background:var(--trang);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,65px);gap:25px;border-bottom:1px solid var(--vien);position:relative;z-index:10}
+.thuongHieu {display:flex;gap:11px;align-items:center;flex-shrink:0}
+.bieuTuong {width:43px;height:43px;background:#0b3670;border-radius:12px 12px 4px 12px;display:grid;place-items:center;color:#fff;transform:rotate(-5deg)}
+.bieuTuong svg {transform:rotate(5deg)}
+.thuongHieu strong {font-size:19px;letter-spacing:-.7px;display:block;white-space:nowrap;color:#14294c}
+.thuongHieu strong span {color:var(--xanh)}
+.thuongHieu small {font-size:8px;letter-spacing:2.3px;font-weight:800;color:#627791}
+.dieuHuong {align-self:stretch;display:flex;align-items:stretch;gap:8px}
+.dieuHuong a {padding:0 19px;display:flex;align-items:center;color:#556780;font-weight:700;border-bottom:3px solid transparent}
+.dieuHuong a:hover {color:var(--xanh);background:#f6f9ff}
+.dieuHuong a.dangChon {border-bottom-color:var(--xanh);color:var(--xanh);background:#f8fbff}
+.tienIch {display:flex;align-items:center;gap:12px}
+.nhanXemThu {border:1px solid #bdd4f6;background:#eef5ff;color:#0756c9;font-size:10px;letter-spacing:.8px;font-weight:800;padding:7px 10px;border-radius:30px;white-space:nowrap}
+.veBanCu {display:inline-flex;gap:7px;align-items:center;font-weight:700;font-size:12px;white-space:nowrap}
+.veBanCu:hover,.lienKetCuoi:hover {color:var(--xanh)}
+.nutMenu,.menuDiDong {display:none}
+.noiDung {max-width:1620px;margin:auto;padding:clamp(22px,3.4vw,52px) clamp(18px,4vw,65px) 45px}
+.dongMoDau {display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
+.nhanNho {font-size:10px;font-weight:800;letter-spacing:1.7px;color:#58779a;display:flex;align-items:center;gap:8px}
+.chamSang {height:7px;width:7px;background:#3bbf88;border-radius:50%;display:inline-block}
+.dongMoDau h1 {font-size:clamp(25px,3vw,42px);line-height:1.16;letter-spacing:-1.7px;color:#102747;margin:14px 0 13px}
+.vetNgan {color:#f3816e;font-weight:400}
+.tieuDeNhe {font-weight:400;color:#8491a7;font-size:.69em;letter-spacing:-1.1px}
+.dongMoDau p {color:var(--nho);font-size:14px}
+.nutChinh {border:0;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;background:var(--xanh);border-radius:11px;color:white;font-weight:750;min-height:46px;box-shadow:0 8px 20px #0756c929;white-space:nowrap}
+.nutChinh:hover {background:#0649ad;transform:translateY(-1px)}
+.daiTinhHinh {border:1px solid var(--vien);background:var(--trang);border-radius:18px;display:grid;grid-template-columns:1.55fr repeat(3,1fr);margin-bottom:25px;overflow:hidden;box-shadow:0 7px 28px #243b5910}
+.chiSoChinh {background:#113767;color:white;display:flex;flex-direction:column;justify-content:center;padding:25px 28px;min-height:150px}
+.chiSoChinh span {color:#bfd3eb;font-size:10px;letter-spacing:1.3px;font-weight:800}
+.chiSoChinh strong {font-size:49px;line-height:1.15;margin:9px 0 2px;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.chiSoChinh small {color:#b3c8dd;font-size:11px}
+.chiSoPhu {display:flex;gap:14px;padding:20px;align-items:center;border-right:1px solid var(--vien)}
+.chiSoPhu:last-child {border-right:0}
+.chiSoPhu span {width:39px;height:39px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
+.iconXanh {background:#e6f7ef;color:#16794b}.iconCam{background:#fff1db;color:#ad6d00}.iconDo{background:#fff0f1;color:#bb3c48}
+.chiSoPhu strong {font-size:30px;letter-spacing:-1px;display:block;font-variant-numeric:tabular-nums}
+.chiSoPhu small {font-size:12px;color:var(--nho);line-height:1.4}
+.luoiChinh {display:grid;grid-template-columns:minmax(0,1.85fr) minmax(275px,.85fr);gap:23px;align-items:start}
+.khuDanhSach,.hoSo {background:white;border:1px solid var(--vien);border-radius:18px;box-shadow:0 7px 28px #243b590b;min-width:0}
+.khuDanhSach {overflow:hidden}
+.tieuDeDanhSach {padding:25px 27px 18px;display:flex;justify-content:space-between;align-items:end;gap:15px}
+.tieuDeDanhSach h2 {font-size:24px;letter-spacing:-.7px;margin:8px 0 0}
+.demKetQua {font-size:12px;font-weight:700;color:#547291}
+.boLoc {padding:0 27px 19px;display:flex;gap:11px}
+.timKiem {display:flex;gap:11px;align-items:center;flex:1;background:#f7f9fd;border:1px solid var(--vien);border-radius:10px;padding:11px 13px;min-width:0;color:#69809c}
+.timKiem:focus-within {border-color:#729ce1}
+.timKiem input {width:100%;background:none;border:0;outline:0;color:#173052;min-width:0;font-size:13px}
+.timKiem input::placeholder {color:#7889a0}
+.chonLoc {display:flex;align-items:center;position:relative;border:1px solid var(--vien);border-radius:10px;background:white;color:#173052;min-width:160px}
+.chonLoc select {appearance:none;width:100%;padding:11px 33px 11px 13px;border:0;background:none;color:inherit;font-size:12px;outline:none;cursor:pointer}
+.chonLoc svg {position:absolute;right:10px;pointer-events:none}
+.bangCuon {overflow-x:auto}
+.bang {border-collapse:collapse;width:100%;font-size:12px;text-align:left;min-width:650px}
+.bang th {background:#f1f5fa;color:#70819a;font-size:10px;text-transform:uppercase;letter-spacing:.8px;padding:13px 16px;font-weight:800;white-space:nowrap}
+.bang td {padding:12px 16px;border-bottom:1px solid #edf1f7;white-space:nowrap;color:#425672}
+.bang tbody tr:last-child td {border-bottom:0}
+.bang tbody tr:hover {background:#f8fbff}
+.bang tbody tr.hangDuocChon {background:#edf4ff}
+.bang th:first-child,.bang td:first-child {padding-left:25px}
+.oNguoi {display:flex;gap:11px;align-items:center;padding:0;border:0;background:none;text-align:left;color:#143052}
+.oNguoi strong {font-size:13px;display:block;color:#173052;line-height:1.25}
+.oNguoi small {font-size:11px;color:#8291a8}
+.avatar {display:grid;place-items:center;flex:0 0 39px;width:39px;height:39px;background:#d8e8fb;color:#0756c9;border-radius:13px 13px 5px 13px;font-weight:800}
+.soMono {font-variant-numeric:tabular-nums}
+.trangThai {display:inline-flex;align-items:center;gap:7px;border-radius:50px;padding:7px 10px;font-weight:750;font-size:10px;white-space:nowrap}
+.trangThai>span {width:6px;height:6px;border-radius:50%;background:currentColor}
+.hoatDong {color:#137a4d;background:#e5f6ec}
+.sapHetHan {color:#915c00;background:#fff3dc}
+.hetHan {color:#b03645;background:#ffebed}
+.nutXem {display:grid;place-items:center;border:1px solid #dce8f8;border-radius:8px;background:white;color:#0756c9;width:31px;height:31px}
+.nutXem:hover {background:#deebff}
+.trangRong {padding:45px 20px;display:flex;flex-direction:column;align-items:center;gap:10px;color:#64758d}
+.trangRong strong {color:#173052}
+.trangRong button {border:0;background:#eaf2ff;color:#0756c9;padding:9px 13px;border-radius:9px;font-weight:700}
+.chanDanhSach {border-top:1px solid #edf1f7;padding:18px 26px;display:flex;justify-content:space-between;gap:12px;color:#788aa2;font-size:11px}
+.hoSo {padding:26px}
+.hoSoDau {display:flex;gap:17px;align-items:center;margin-top:25px}
+.avatarLon {height:96px;width:85px;flex-shrink:0;border-radius:15px 15px 6px 15px;background:#eaf2ff;display:flex;flex-direction:column;gap:7px;align-items:center;justify-content:center;color:#8ba9ce}
+.avatarLon small {font-size:8px;letter-spacing:.6px;font-weight:800}
+.maHoiVien {font-size:10px;font-weight:800;color:#0756c9;letter-spacing:1px}
+.hoSoDau h2 {font-size:clamp(17px,1.5vw,24px);letter-spacing:-.5px;color:#173052;margin:8px 0 12px}
+.thongTinChinh {margin-top:28px;border:1px solid #d6e5fa;border-left:4px solid #0756c9;border-radius:12px;background:#f3f8ff;padding:21px}
+.thongTinChinh span {color:#6881a1;font-size:10px;font-weight:800;letter-spacing:1px}
+.thongTinChinh strong {display:block;margin:11px 0 6px;font-size:23px;color:#153e77}
+.thongTinChinh small {color:#6b7f99;font-size:12px}
+.chiTiet {margin:16px 0}
+.chiTiet>div {display:flex;justify-content:space-between;gap:10px;padding:15px 0;border-bottom:1px solid var(--vien)}
+.chiTiet dt {display:flex;align-items:center;gap:8px;color:#697e99;font-size:12px}
+.chiTiet dd {margin:0;font-size:12px;font-weight:750;color:#233b57;text-align:right;overflow-wrap:anywhere}
+.hanhDongHoSo {display:flex;gap:10px;margin-top:25px}
+.nutXoa {background:white;border:1px solid #f0bfc7;color:#b03645;border-radius:9px;padding:11px 13px;font-weight:750;display:flex;align-items:center;gap:9px;min-height:44px}
+.nutXoa:hover {background:#fff1f2}
+.ghiChuHoSo {font-size:11px;color:#7b8ba2;margin:17px 0 0;line-height:1.6}
+.hoSoRong {min-height:310px;display:flex;align-items:center;justify-content:center;gap:10px;flex-direction:column;color:#8392a6}
+.hoSoRong strong {color:#173052}
+.daiCuoi {display:flex;align-items:center;gap:14px;margin-top:24px;padding:21px 23px;border:1px dashed #b6cde9;border-radius:14px;background:#ebf3fd}
+.bieuTuongNho {width:42px;height:42px;display:grid;place-items:center;border-radius:10px;background:#d9eaff;color:#0756c9}
+.daiCuoi div:nth-child(2) {display:flex;flex-direction:column;gap:5px;flex:1}
+.daiCuoi strong {font-size:11px;letter-spacing:.8px;color:#244667}
+.daiCuoi span {font-size:12px;color:#66809b}
+.lienKetCuoi {display:flex;gap:7px;align-items:center;font-weight:750;color:#0756c9!important;font-size:12px}
+.thongBao {position:fixed;right:22px;bottom:22px;z-index:40;background:#153967;color:white;border-radius:12px;padding:13px 18px;display:flex;align-items:center;gap:11px;box-shadow:0 12px 30px #102c4960;max-width:calc(100% - 44px)}
+.thongBao button {border:0;background:transparent;color:white;display:grid;place-items:center}
+.phuMo {position:fixed;inset:0;background:#0e294e9c;z-index:30;display:grid;place-items:center;padding:20px;overflow:auto}
+.hopThoai {background:white;border-radius:20px;width:min(100%,480px);max-height:calc(100vh - 40px);overflow-y:auto;padding:26px;box-shadow:0 24px 80px #09203a66}
+.dauHopThoai {display:flex;align-items:start;justify-content:space-between}
+.dauHopThoai h2 {font-size:28px;margin:6px 0 20px}
+.dauHopThoai>button {background:#f0f5fb;border:0;border-radius:9px;padding:9px;display:grid;place-items:center;color:#426486}
+.bieuMau {display:grid;gap:14px}
+.bieuMau label {display:grid;gap:7px;color:#35516e;font-size:12px;font-weight:800}
+.bieuMau input,.bieuMau select {border:1px solid #cad9e9;border-radius:9px;background:white;color:#173052;padding:12px;width:100%}
+.bieuMau input:focus,.bieuMau select:focus {border-color:#0756c9}
+.nutBieuMau {display:flex;justify-content:flex-end;gap:10px;margin-top:9px}
+.nutPhu {background:#f0f4fa;color:#344d6b;border:0;border-radius:10px;padding:13px 20px;font-weight:800}
+@media (max-width:1250px) {.dieuHuong a{padding:0 10px}.luoiChinh{grid-template-columns:minmax(0,1.5fr) minmax(245px,.9fr)}.chiSoPhu{padding:15px 10px;gap:8px}.chiSoPhu strong{font-size:25px}.hoSo{padding:20px}}
+@media (max-width:960px) {.dieuHuong,.veBanCu{display:none}.nutMenu{display:grid;place-items:center;border:1px solid var(--vien);background:white;border-radius:10px;width:42px;height:42px}.menuDiDong{display:flex;flex-direction:column;gap:4px;background:white;padding:12px 20px;border-bottom:1px solid var(--vien)}.menuDiDong a{padding:12px;border-radius:8px;font-weight:700}.menuDiDong a[aria-current="page"]{background:#eaf2ff;color:#0756c9}.daiTinhHinh{grid-template-columns:repeat(3,1fr)}.chiSoChinh{grid-column:span 3;min-height:120px}.chiSoChinh strong{font-size:40px}.luoiChinh{grid-template-columns:1fr}.hoSo{max-width:none}}
+@media (max-width:600px) {.thanhDau{padding:12px 16px;min-height:66px}.thuongHieu strong{font-size:16px}.thuongHieu small{font-size:7px}.bieuTuong{height:36px;width:36px}.nhanXemThu{display:none}.noiDung{padding:22px 14px}.dongMoDau{align-items:start;flex-direction:column;margin-bottom:20px}.dongMoDau h1{font-size:30px}.tieuDeNhe{display:block;margin-top:6px;font-size:19px}.daiTinhHinh{grid-template-columns:1fr 1fr}.chiSoChinh{grid-column:span 2}.chiSoPhu{border-top:1px solid var(--vien)}.chiSoPhu:last-child{grid-column:span 2}.tieuDeDanhSach{padding:21px 16px 16px}.boLoc{padding:0 16px 15px;flex-direction:column}.chonLoc{width:100%}.bang{min-width:620px}.chanDanhSach{padding:15px 16px}.hoSoDau{gap:11px}.daiCuoi{flex-wrap:wrap}.lienKetCuoi{width:100%}.nutChinh{width:100%}.nutBieuMau .nutChinh{width:auto}}
+@media (prefers-reduced-motion:reduce) {.khungTrang * {animation:none!important;transition:none!important;scroll-behavior:auto!important}}
